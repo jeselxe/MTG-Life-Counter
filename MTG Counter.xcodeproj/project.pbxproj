@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,14 @@
 		2AB47E1D25B48667002AEEF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB47E0825B48662002AEEF7 /* ContentView.swift */; };
 		2AB47E1E25B48667002AEEF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB47E0925B48667002AEEF7 /* Assets.xcassets */; };
 		2AB47E1F25B48667002AEEF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB47E0925B48667002AEEF7 /* Assets.xcassets */; };
+		2AB47E2B25B486D6002AEEF7 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB47E2A25B486D6002AEEF7 /* UserView.swift */; };
+		2AB47E2C25B486D6002AEEF7 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB47E2A25B486D6002AEEF7 /* UserView.swift */; };
+		2AB47E3125B48A0D002AEEF7 /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2AB47E3025B48A0D002AEEF7 /* PureSwiftUI */; };
+		2AB47E3625B48A75002AEEF7 /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2AB47E3525B48A75002AEEF7 /* PureSwiftUI */; };
+		2AB47E3C25B4B5B1002AEEF7 /* ColorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB47E3B25B4B5B1002AEEF7 /* ColorSelectionView.swift */; };
+		2AB47E3D25B4B5B1002AEEF7 /* ColorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB47E3B25B4B5B1002AEEF7 /* ColorSelectionView.swift */; };
+		2AFD2DC925B4D53E001E543A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFD2DC825B4D53E001E543A /* UserModel.swift */; };
+		2AFD2DCA25B4D53E001E543A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFD2DC825B4D53E001E543A /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,9 @@
 		2AB47E1625B48667002AEEF7 /* MTG Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MTG Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB47E1825B48667002AEEF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AB47E1925B48667002AEEF7 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		2AB47E2A25B486D6002AEEF7 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		2AB47E3B25B4B5B1002AEEF7 /* ColorSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectionView.swift; sourceTree = "<group>"; };
+		2AFD2DC825B4D53E001E543A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AB47E3125B48A0D002AEEF7 /* PureSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AB47E3625B48A75002AEEF7 /* PureSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +64,7 @@
 				2AB47E1025B48667002AEEF7 /* iOS */,
 				2AB47E1725B48667002AEEF7 /* macOS */,
 				2AB47E0F25B48667002AEEF7 /* Products */,
+				2AB47E3425B48A74002AEEF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +74,9 @@
 				2AB47E0725B48662002AEEF7 /* MTG_CounterApp.swift */,
 				2AB47E0825B48662002AEEF7 /* ContentView.swift */,
 				2AB47E0925B48667002AEEF7 /* Assets.xcassets */,
+				2AB47E2A25B486D6002AEEF7 /* UserView.swift */,
+				2AB47E3B25B4B5B1002AEEF7 /* ColorSelectionView.swift */,
+				2AFD2DC825B4D53E001E543A /* UserModel.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -90,6 +107,13 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		2AB47E3425B48A74002AEEF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +130,9 @@
 			dependencies = (
 			);
 			name = "MTG Counter (iOS)";
+			packageProductDependencies = (
+				2AB47E3025B48A0D002AEEF7 /* PureSwiftUI */,
+			);
 			productName = "MTG Counter (iOS)";
 			productReference = 2AB47E0E25B48667002AEEF7 /* MTG Counter.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +150,9 @@
 			dependencies = (
 			);
 			name = "MTG Counter (macOS)";
+			packageProductDependencies = (
+				2AB47E3525B48A75002AEEF7 /* PureSwiftUI */,
+			);
 			productName = "MTG Counter (macOS)";
 			productReference = 2AB47E1625B48667002AEEF7 /* MTG Counter.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +183,9 @@
 				Base,
 			);
 			mainGroup = 2AB47E0125B48662002AEEF7;
+			packageReferences = (
+				2AB47E2F25B48A0D002AEEF7 /* XCRemoteSwiftPackageReference "pure-swift-ui" */,
+			);
 			productRefGroup = 2AB47E0F25B48667002AEEF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,7 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB47E1C25B48667002AEEF7 /* ContentView.swift in Sources */,
+				2AB47E2B25B486D6002AEEF7 /* UserView.swift in Sources */,
 				2AB47E1A25B48667002AEEF7 /* MTG_CounterApp.swift in Sources */,
+				2AFD2DC925B4D53E001E543A /* UserModel.swift in Sources */,
+				2AB47E3C25B4B5B1002AEEF7 /* ColorSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +233,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB47E1D25B48667002AEEF7 /* ContentView.swift in Sources */,
+				2AB47E2C25B486D6002AEEF7 /* UserView.swift in Sources */,
 				2AB47E1B25B48667002AEEF7 /* MTG_CounterApp.swift in Sources */,
+				2AFD2DCA25B4D53E001E543A /* UserModel.swift in Sources */,
+				2AB47E3D25B4B5B1002AEEF7 /* ColorSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +478,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2AB47E2F25B48A0D002AEEF7 /* XCRemoteSwiftPackageReference "pure-swift-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CodeSlicing/pure-swift-ui.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2AB47E3025B48A0D002AEEF7 /* PureSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AB47E2F25B48A0D002AEEF7 /* XCRemoteSwiftPackageReference "pure-swift-ui" */;
+			productName = PureSwiftUI;
+		};
+		2AB47E3525B48A75002AEEF7 /* PureSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AB47E2F25B48A0D002AEEF7 /* XCRemoteSwiftPackageReference "pure-swift-ui" */;
+			productName = PureSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2AB47E0225B48662002AEEF7 /* Project object */;
 }
