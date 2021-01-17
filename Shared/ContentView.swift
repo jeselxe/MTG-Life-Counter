@@ -9,21 +9,21 @@ import SwiftUI
 import PureSwiftUI
 
 struct ContentView: View {
-    @State private var editing = false
-    @State private var selectingColor = false
-    @State private var color1: Color = .mtgMountain
-    @State private var color2: Color = .mtgIsland
+    @State private var isHeaderVisible = false
+    
+    @State private var user1 = User(color: .mtgMountain, lifes: 20)
+    @State private var user2 = User(color: .mtgIsland, lifes: 20)
     
     var body: some View {
         ZStack {
-            VStack(spacing: editing ? 40 : 0) {
-                UserView(color: color1)
+            VStack(spacing: isHeaderVisible ? 40 : 0) {
+                UserView(user: $user1)
                     .rotate(180.degree)
                 
-                UserView(color: color2)
+                UserView(user: $user2)
             }
-            RenderIf(editing) {
-                HStack {
+            RenderIf(isHeaderVisible) {
+                HStack(spacing: 30) {
                     Button(action: restart) {
                         SFSymbol(.repeat)
                             .foregroundColor(.black)
@@ -32,7 +32,8 @@ struct ContentView: View {
                             .clipCircleWithStroke(.black, lineWidth: 2)
                     }
                     Button(action: {
-                        selectingColor = true
+                        user1.editing = true
+                        user2.editing = true
                     }) {
                         SFSymbol(.restart)
                             .foregroundColor(.black)
@@ -57,30 +58,18 @@ struct ContentView: View {
                         .clipCircleWithStroke(.black, lineWidth: 2)
                 }
             }
-            RenderIf(selectingColor) {
-                VStack(spacing: 0) {
-                    ColorSelectionView(onSelected: { color in
-                        color1 = color
-                        selectingColor = false
-                    })
-                        .rotate(180.degree)
-                    ColorSelectionView(onSelected: { color in
-                        color2 = color
-                        selectingColor = false
-                    })
-                }
-            }
         }.ignoresSafeArea()
     }
     
     private func configure() {
         withAnimation {
-            editing.toggle()
+            isHeaderVisible.toggle()
         }
     }
     
     private func restart() {
-        
+        user2.lifes = 20
+        user1.lifes = 20
     }
 }
 

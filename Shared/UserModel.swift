@@ -11,4 +11,5 @@ import SwiftUI
 struct User {
     var color: Color = .mtgMountain
     var lifes: Int = 20
+    var editing: Bool = false
 }
