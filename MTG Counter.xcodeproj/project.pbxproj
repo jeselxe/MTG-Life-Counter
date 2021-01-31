@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A43FFE425C5F4E500219215 /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43FFE325C5F4E500219215 /* ActionsView.swift */; };
+		2A43FFE525C5F4E500219215 /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43FFE325C5F4E500219215 /* ActionsView.swift */; };
+		2A43FFE925C5F94300219215 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43FFE825C5F94300219215 /* GameModel.swift */; };
+		2A43FFEA25C5F94300219215 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43FFE825C5F94300219215 /* GameModel.swift */; };
+		2A43FFEE25C6022400219215 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43FFED25C6022400219215 /* ButtonView.swift */; };
+		2A43FFEF25C6022400219215 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A43FFED25C6022400219215 /* ButtonView.swift */; };
 		2AB47E1A25B48667002AEEF7 /* MTG_CounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB47E0725B48662002AEEF7 /* MTG_CounterApp.swift */; };
 		2AB47E1B25B48667002AEEF7 /* MTG_CounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB47E0725B48662002AEEF7 /* MTG_CounterApp.swift */; };
 		2AB47E1C25B48667002AEEF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB47E0825B48662002AEEF7 /* ContentView.swift */; };
@@ -24,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A43FFE325C5F4E500219215 /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
+		2A43FFE825C5F94300219215 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		2A43FFED25C6022400219215 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		2AB47E0725B48662002AEEF7 /* MTG_CounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTG_CounterApp.swift; sourceTree = "<group>"; };
 		2AB47E0825B48662002AEEF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2AB47E0925B48667002AEEF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +66,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A43FFF225C6073800219215 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2AB47E0825B48662002AEEF7 /* ContentView.swift */,
+				2AB47E2A25B486D6002AEEF7 /* UserView.swift */,
+				2A43FFE325C5F4E500219215 /* ActionsView.swift */,
+				2A43FFED25C6022400219215 /* ButtonView.swift */,
+				2AB47E3B25B4B5B1002AEEF7 /* ColorSelectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2A43FFF325C6074000219215 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2A43FFE825C5F94300219215 /* GameModel.swift */,
+				2AFD2DC825B4D53E001E543A /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2AB47E0125B48662002AEEF7 = {
 			isa = PBXGroup;
 			children = (
@@ -71,12 +101,10 @@
 		2AB47E0625B48662002AEEF7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2A43FFF325C6074000219215 /* Models */,
+				2A43FFF225C6073800219215 /* Views */,
 				2AB47E0725B48662002AEEF7 /* MTG_CounterApp.swift */,
-				2AB47E0825B48662002AEEF7 /* ContentView.swift */,
 				2AB47E0925B48667002AEEF7 /* Assets.xcassets */,
-				2AB47E2A25B486D6002AEEF7 /* UserView.swift */,
-				2AB47E3B25B4B5B1002AEEF7 /* ColorSelectionView.swift */,
-				2AFD2DC825B4D53E001E543A /* UserModel.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -222,8 +250,11 @@
 			files = (
 				2AB47E1C25B48667002AEEF7 /* ContentView.swift in Sources */,
 				2AB47E2B25B486D6002AEEF7 /* UserView.swift in Sources */,
+				2A43FFEE25C6022400219215 /* ButtonView.swift in Sources */,
 				2AB47E1A25B48667002AEEF7 /* MTG_CounterApp.swift in Sources */,
 				2AFD2DC925B4D53E001E543A /* UserModel.swift in Sources */,
+				2A43FFE425C5F4E500219215 /* ActionsView.swift in Sources */,
+				2A43FFE925C5F94300219215 /* GameModel.swift in Sources */,
 				2AB47E3C25B4B5B1002AEEF7 /* ColorSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,8 +265,11 @@
 			files = (
 				2AB47E1D25B48667002AEEF7 /* ContentView.swift in Sources */,
 				2AB47E2C25B486D6002AEEF7 /* UserView.swift in Sources */,
+				2A43FFEF25C6022400219215 /* ButtonView.swift in Sources */,
 				2AB47E1B25B48667002AEEF7 /* MTG_CounterApp.swift in Sources */,
 				2AFD2DCA25B4D53E001E543A /* UserModel.swift in Sources */,
+				2A43FFE525C5F4E500219215 /* ActionsView.swift in Sources */,
+				2A43FFEA25C5F94300219215 /* GameModel.swift in Sources */,
 				2AB47E3D25B4B5B1002AEEF7 /* ColorSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

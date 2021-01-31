@@ -9,7 +9,7 @@ import SwiftUI
 import PureSwiftUI
 
 struct UserView: View {
-    @Binding var user: User
+    @ObservedObject var user: User
     
     @State private var updatingLifes = false
     @State private var change = 0
@@ -17,27 +17,6 @@ struct UserView: View {
     
     var body: some View {
         ZStack {
-            HStack(spacing: 0) {
-                    
-                Text("-")
-                    .greedyFrame()
-                    .fontSize(50)
-                    .opacity(0.2)
-                    .backgroundColor(user.color)
-                    .onTapGesture {
-                        addToCounter(-1)
-                    }
-                    
-                Text("+")
-                    .greedyFrame()
-                    .fontSize(50)
-                    .opacity(0.2)
-                    .backgroundColor(user.color)
-                    .onTapGesture {
-                        addToCounter(1)
-                    }
-                    
-            }
             Text(String(user.lifes + change))
                 .fontSize(140)
             RenderIf(updatingLifes) {
@@ -52,7 +31,30 @@ struct UserView: View {
                     user.editing = false
                 })
             }
+            HStack {
+                Button(action: {addToCounter(-1)}) {
+                    Group {
+                        Text("-")
+                            .fontSize(50)
+                            .opacity(0.2)
+                        Spacer()
+                    }
+                    .greedyFrame()
+                }
+                Button(action: {addToCounter(1)}) {
+                    Group {
+                        Spacer()
+                        Text("+")
+                            .fontSize(50)
+                            .opacity(0.2)
+                    }
+                    .greedyFrame()
+                }
+                
+            }
         }
+        .greedyFrame()
+        .background(user.color)
     }
     
     private func addToCounter(_ value: Int) {
@@ -73,12 +75,13 @@ struct UserView: View {
 
 struct UserView_Previews: PreviewProvider {
     struct UserViewContainer: View {
-        @State private var user = User(color: .mtgForest, lifes: 20)
+        @State private var user = User()
         var body: some View {
-            UserView(user: $user)
+            UserView(user: user)
         }
     }
     static var previews: some View {
         UserViewContainer()
+        
     }
 }
