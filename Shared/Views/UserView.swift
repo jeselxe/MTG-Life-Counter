@@ -25,12 +25,6 @@ struct UserView: View {
                     .opacity(0.6)
                     .yOffset(-120)
             }
-            RenderIf(user.editing) {
-                ColorSelectionView(onSelected: {color in
-                    user.color = color
-                    user.editing = false
-                })
-            }
             HStack {
                 Button(action: {addToCounter(-1)}) {
                     Group {
@@ -51,6 +45,12 @@ struct UserView: View {
                     .greedyFrame()
                 }
                 
+            }
+            RenderIf(user.editing) {
+                ColorSelectionView(onSelected: {color in
+                    user.color = color
+                    user.editing = false
+                })
             }
         }
         .greedyFrame()
