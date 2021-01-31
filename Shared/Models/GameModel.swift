@@ -20,4 +20,16 @@ class Game: ObservableObject {
         self.lifes = 20
     }
     
+    func resetLives() {
+        users.forEach{ $0.lifes = self.lifes }
+    }
+    
+    func setIntoEditingMode() {
+        users.forEach{ $0.editing = true }
+    }
+    
+    func whoBegins() -> Int {
+        Int.random(in: users.indices)
+    }
+    
 }

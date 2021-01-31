@@ -14,13 +14,21 @@ struct Actions: View {
     
     @Binding var isVisible: Bool
     
+    @State private var isWhoStartVisible = false
+    
     var body: some View {
         HStack(spacing: 30) {
-            ButtonView(symbolName: .repeat, action: {
-                game.users.forEach{ $0.lifes = game.lifes }
+            ButtonView(symbolName: .arrow_2_squarepath, action: {
+                game.resetLives()
             })
-            ButtonView(symbolName: .restart, action: {
-                game.users.forEach{ $0.editing = true }
+            ButtonView(symbolName: .person_fill_questionmark, action: {
+                game.setIntoEditingMode()
+            })
+            ButtonView(symbolName: .list_number, action: {
+                isWhoStartVisible = true
+            })
+            .alert(isPresented: $isWhoStartVisible, content: {
+                Alert(title: Text("Empieza el jugador \(game.whoBegins() + 1 )"))
             })
             ButtonView(symbolName: .xmark, action: {
                 withAnimation {

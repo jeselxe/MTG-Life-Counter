@@ -25,7 +25,7 @@ struct ContentView: View {
             RenderIf(isHeaderVisible) {
                 Actions(isVisible: $isHeaderVisible)
             }.elseRender {
-                ButtonView(symbolName: .hammer,action: configure)
+                ButtonView(symbolName: .slider_horizontal_3,action: configure)
             }
         }.ignoresSafeArea()
     }
