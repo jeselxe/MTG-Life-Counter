@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct MTG_CounterApp: App {
+    
+    @StateObject var game = Game()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(game)
         }
     }
 }

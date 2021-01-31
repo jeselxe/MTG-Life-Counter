@@ -18,7 +18,7 @@ struct UserView: View {
     var body: some View {
         ZStack {
             Text(String(user.lifes + change))
-                .fontSize(140)
+                .fontSize(140).foregroundColor(Color("LightColor"))
             RenderIf(updatingLifes) {
                 Text("\(change > 0 ? "+" : "")\(change)")
                     .fontSize(60)
